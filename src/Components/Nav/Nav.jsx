@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Logo from "../../Assets/logo.png";
+import { useTranslation } from "react-i18next";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,8 +16,8 @@ const Nav = () => {
   };
 
   const changeLanguage = (language) => {
-    // هنا تضع الكود الذي يغير اللغة (مثال: i18n.changeLanguage(language))
-    setDropdownOpen(false); // إغلاق القائمة بعد اختيار اللغة
+    i18n.changeLanguage(language); // تغيير اللغة
+    setDropdownOpen(false); // إغلاق القائمة المنسدلة بعد اختيار اللغة
   };
 
   return (
@@ -23,7 +25,6 @@ const Nav = () => {
       {/* القائمة اليسرى */}
       <div className="flex items-center">
         <button className="md:hidden p-2 text-xl relative" onClick={toggleMenu}>
-          {/* أيقونة التوجل */}
           <i className="fa-solid fa-bars"></i>
         </button>
         <ul
@@ -33,25 +34,51 @@ const Nav = () => {
               : "hidden"
           } md:flex gap-3 md:bg-transparent p-3 md:p-0`}
         >
-          <li>Join the team</li>
-          <li>Contact us</li>
-
-          {/* القائمة للغة في الشاشات الصغيرة */}
-          <div
-            className={`${
-              isMenuOpen ? "block w-[90%]" : "hidden"
-            } md:hidden gap-3 md:bg-transparent p-3 md:p-0`}
-          >
-            <li onClick={() => changeLanguage("en")} className="cursor-pointer">
-              English
-            </li>
-            <li onClick={() => changeLanguage("es")} className="cursor-pointer">
-              Spanish
-            </li>
-            <li onClick={() => changeLanguage("fr")} className="cursor-pointer">
-              French
-            </li>
-          </div>
+          <li>{t("Join the team")}</li>
+          <li>{t("Contact us")}</li>
+          {/* القائمة لتغيير اللغة في الشاشات الصغيرة */}
+          <li className="md:hidden">
+            <div className="relative inline-block text-left">
+              <button
+                onClick={toggleDropdown}
+                className="inline-flex justify-center w-full items-center text-white"
+              >
+                {t("Language")}
+                <svg
+                  className={`w-5 h-5 ml-2 transform ${
+                    dropdownOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.707a1 1 0 011.414 0L10 11.414l3.293-3.707a1 1 0 111.414 1.414l-4 4"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              {dropdownOpen && (
+                <div className="absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-lg w-48">
+                  <ul className="py-1">
+                    <li
+                      onClick={() => changeLanguage("en")}
+                      className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                    >
+                      {t("English")}
+                    </li>
+                    <li
+                      onClick={() => changeLanguage("ar")}
+                      className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                    >
+                      {t("Arabic")}
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </li>
         </ul>
       </div>
 
@@ -60,15 +87,15 @@ const Nav = () => {
         <img src={Logo} alt="Logo" className="w-[50px]" />
       </div>
 
-      {/* القائمة اليمنى */}
+      {/* القائمة اليمنى للشاشات الكبيرة */}
       <ul className="hidden md:flex gap-3">
         <li>
           <div className="relative inline-block text-left">
             <button
               onClick={toggleDropdown}
-              className="inline-flex justify-center w-full  "
+              className="inline-flex justify-center w-full items-center"
             >
-              English
+              {t("Language")}
               <svg
                 className={`w-5 h-5 ml-2 transform ${
                   dropdownOpen ? "rotate-180" : "rotate-0"
@@ -86,20 +113,26 @@ const Nav = () => {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute right-0 mt-2 origin-top-right bg-white border border-gray-300 rounded-md shadow-lg w-48">
+              <div className="absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-lg w-48">
                 <ul className="py-1">
                   <li
                     onClick={() => changeLanguage("en")}
                     className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
                   >
-                    Arabic
+                    {t("English")}
+                  </li>
+                  <li
+                    onClick={() => changeLanguage("ar")}
+                    className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                  >
+                    {t("Arabic")}
                   </li>
                 </ul>
               </div>
             )}
           </div>
         </li>
-        <li>Login</li>
+        <li>{t("Login")}</li>
       </ul>
     </div>
   );

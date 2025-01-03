@@ -43,12 +43,29 @@
   border-radius: 10px; /* زوايا منحنية */
 }
 
+/*start section two */
+.section-two {
+  background: rgb(221, 196, 235);
+  background: linear-gradient(
+    90deg,
+    rgba(221, 196, 235, 1) 0%,
+    rgba(88, 25, 198, 1) 35%,
+    rgba(253, 235, 255, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  height: 200vh;
+}
+.section-two .container {
+  /* background: url("../../Assets/sectionTwo.png") no-repeat center/cover; */
+  height: 100vh;
+}
+
+/*end section two */
+
 /* Start Responsive Area*/
 @media (min-width: 0px) and (max-width: 600px) {
-  .section-one {
-    background: url("../../Assets/Home Page.png") no-repeat center/cover;
-  }
-
   .land-txt h1 {
     font-size: 25px;
     margin-top: 10px;

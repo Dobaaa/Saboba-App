@@ -4,13 +4,12 @@ import LandImg from "../../Assets/worker.png";
 import "./home.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Paginationn from "./pagination/pagination ";
 
 const Home = () => {
+  // translate the content
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
   return (
     <div>
       <div className="section-one">
@@ -21,7 +20,7 @@ const Home = () => {
               <div className="basis-1/2 flex flex-col  items-center text-center">
                 <div className="land-txt">
                   <div className="gradient-h4">
-                    <h4>Gaming Club 2.0 Release</h4>
+                    <h4>{t("welcome")}</h4>
                   </div>
                   <h1>Have you ever tried fix your House by Click</h1>
                 </div>
@@ -60,6 +59,14 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/*section two */}
+
+      <div className="section-two">
+        <div className="container">
+          <h2>Our Services</h2>
+          <Paginationn />
         </div>
       </div>
     </div>
