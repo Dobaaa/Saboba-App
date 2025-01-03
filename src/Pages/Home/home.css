@@ -1,0 +1,93 @@
+.section-one {
+  background: url("../../Assets/Home Page.png") no-repeat center/cover;
+  color: aliceblue;
+  height: 100vh;
+}
+.gradient-h4 {
+  display: flex;
+  justify-content: center;
+}
+.land-txt h4 {
+  color: var(--main-color);
+  background-color: rgba(245, 63, 160, 0.153);
+  width: fit-content;
+  padding: 8px;
+  border-radius: 8px;
+}
+.land-txt h1 {
+  font-size: 55px;
+  font-weight: bold;
+}
+.land-icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.icon-one,
+.icon-two {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.Land-img {
+  position: relative;
+  border: 2px solid gray; /* خلي البوردر الأساسي شفاف */
+  border-radius: 10px; /* زوايا منحنية */
+}
+
+/* Start Responsive Area*/
+@media (min-width: 0px) and (max-width: 600px) {
+  .section-one {
+    background: url("../../Assets/Home Page.png") no-repeat center/cover;
+  }
+
+  .land-txt h1 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .land-icon i {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    font-size: 10px;
+  }
+  .Land-img {
+    width: 250px;
+  }
+  .icon-one,
+  .icon-two {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+
+  .land-txt,
+  .land-icon {
+    padding: 30px 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .land-txt h1 {
+    font-size: 35px;
+    margin-top: 10px;
+  }
+  .land-icon i {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  .icon-one,
+  .icon-two {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}
