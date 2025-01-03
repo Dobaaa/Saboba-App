@@ -8,4 +8,42 @@
 }
 .card-txt {
   padding: 10px 20px;
+  max-height: 120px;
+}
+
+.card h5,
+.section-two h2 {
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    #3d4fdd,
+    #b1ea7f,
+    #6a82fb,
+    #9b59b6,
+    #3b3b98
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For modern browsers */
+  text-fill-color: transparent; /* For modern browsers */
+  animation: galaxy-animation 5s infinite;
+}
+
+.card p {
+  color: gray;
+}
+
+/* Anmation Area */
+
+@keyframes galaxy-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

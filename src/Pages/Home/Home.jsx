@@ -64,8 +64,8 @@ const Home = () => {
       {/*section two */}
 
       <div className="section-two">
-        <div className="container">
-          <h2>Our Services</h2>
+        <div className="container mt-5">
+          <h2 className="text-center pt-5 pb-5 text-6xl">Our Services</h2>
           <Paginationn />
         </div>
       </div>

@@ -45,20 +45,13 @@
 
 /*start section two */
 .section-two {
-  background: rgb(221, 196, 235);
-  background: linear-gradient(
-    90deg,
-    rgba(221, 196, 235, 1) 0%,
-    rgba(88, 25, 198, 1) 35%,
-    rgba(253, 235, 255, 1) 100%
-  );
+  background: url("../../Assets/Home Page.png") no-repeat center/cover;
   display: flex;
   justify-content: center;
   color: var(--white);
   height: 200vh;
 }
 .section-two .container {
-  /* background: url("../../Assets/sectionTwo.png") no-repeat center/cover; */
   height: 100vh;
 }
 
