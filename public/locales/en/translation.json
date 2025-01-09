@@ -1,4 +1,22 @@
 {
-  "welcome": "Welcomeeee",
-  "description": "This is a multi-language app."
+  "nav1": "Join the team",
+  "nav2": "Contact us",
+  "nav3": "Language",
+  "nav4": "Login",
+  "Heading": "Have you ever tried fix your House by Click",
+  "description": "This is a multi-language app.",
+  "icon1": "Feel at Home",
+  "icon2": "Quick Repairs",
+  "icon3": "Journey Map",
+  "icon4": "Customer Support",
+  "btn1": "JOIN Saboba!",
+  "btn2": "see All Workers",
+  "cate1": "Ai Support",
+  "cate2": "bulding",
+  "cate3": "electricity",
+  "cate4": "Plumbing",
+  "cate5": "Carpenter",
+  "cate6": "painter",
+  "cate7": "Technician",
+  "cate8": "Technician"
 }

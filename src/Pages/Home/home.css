@@ -1,8 +1,8 @@
-.section-one {
+.sections-parent {
   background: url("../../Assets/Home Page.png") no-repeat center/cover;
   color: aliceblue;
-  height: 100vh;
 }
+
 .gradient-h4 {
   display: flex;
   justify-content: center;
@@ -45,11 +45,9 @@
 
 /*start section two */
 .section-two {
-  background: url("../../Assets/Home Page.png") no-repeat center/cover;
   display: flex;
   justify-content: center;
   color: var(--white);
-  height: 200vh;
 }
 .section-two .container {
   height: 100vh;
@@ -57,6 +55,14 @@
 
 /*end section two */
 
+/* start section three*/
+.why-txt-box {
+  padding-bottom: 20px;
+}
+.why-txt-box i {
+  font-size: 70px;
+}
+/* end section three*/
 /* Start Responsive Area*/
 @media (min-width: 0px) and (max-width: 600px) {
   .land-txt h1 {
