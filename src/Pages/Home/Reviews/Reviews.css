@@ -1,0 +1,54 @@
+.review-cards .swiper {
+  width: 300px;
+  height: 420px;
+}
+
+.review-cards .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.review-cards .swiper-slide {
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+}
+
+.review-cards .swiper-slide:nth-child(2n) {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.review-cards .swiper-slide:nth-child(3n) {
+  background: linear-gradient(135deg, #2c2c54, #706fd3);
+}
+
+.review-cards .swiper-slide:nth-child(4n) {
+  background: linear-gradient(135deg, #3b185f, #6a0572);
+}
+
+.review-cards .swiper-slide:nth-child(5n) {
+  background: linear-gradient(135deg, #240046, #5a189a);
+}
+
+.review-cards .swiper-slide:nth-child(6n) {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.review-cards .swiper-slide:nth-child(7n) {
+  background: linear-gradient(135deg, #4e0250, #9a0680);
+}
+
+.review-cards .swiper-slide:nth-child(8n) {
+  background: linear-gradient(135deg, #3a0ca3, #7209b7);
+}
+
+.review-cards .swiper-slide:nth-child(9n) {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+}
+
+.review-cards .swiper-slide:nth-child(10n) {
+  background: linear-gradient(135deg, #001d3d, #003566);
+}

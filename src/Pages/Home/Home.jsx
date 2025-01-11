@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Paginationn from "./pagination/pagination ";
 import MobileImg from "../../Assets/mobile.png";
+import Reviews from "./Reviews/Reviews";
+import Products from "./Products/Products";
 const Home = () => {
   // translate the content
   const { t, i18n } = useTranslation();
@@ -119,6 +121,19 @@ const Home = () => {
           <div className="why-saboba-img basis-1/2 flex ">
             <img src={MobileImg} alt="" className="w-[500px]" />
           </div>
+        </div>
+      </div>
+      {/*section four */}
+      <div className="reviews">
+        <div className="container">
+          <h2 className="text-center pt-4 text-3xl">Reviews</h2>
+          <Reviews />
+        </div>
+      </div>
+      {/*section five */}
+      <div className="products flex justify-center pt-5 pb-5">
+        <div className="container flex justify-center">
+          <Products />
         </div>
       </div>
     </div>

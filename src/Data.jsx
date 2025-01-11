@@ -7,7 +7,7 @@ import ServicesImg6 from "./Assets/bucket.jpg";
 import ServicesImg7 from "./Assets/gh.jpg";
 import ServicesImg8 from "./Assets/aa.avif";
 
-export const ServiceData = [
+const ServiceData = [
   {
     id: 1,
     img: ServicesImg1,
@@ -57,3 +57,55 @@ export const ServiceData = [
     desc: "An expert in diagnosing and repairing air conditioners",
   },
 ];
+const productsData = [
+  {
+    id: 1,
+    name: "Product 1",
+    category: "Electronics",
+    price: "50 EG",
+  },
+  {
+    id: 2,
+    name: "Product 2",
+    category: "Clothing",
+    price: "50 EG",
+  },
+  {
+    id: 3,
+    name: "Product 3",
+    category: "Electronics",
+    price: "50 EG",
+  },
+  {
+    id: 4,
+    name: "Product 4",
+    category: "Clothing",
+    price: "50 EG",
+  },
+  {
+    id: 5,
+    name: "Product 5",
+    category: "Home",
+    price: "50 EG",
+  },
+  {
+    id: 6,
+    name: "Product 6",
+    category: "Electronics",
+    price: "50 EG",
+  },
+  {
+    id: 7,
+    name: "Product 7",
+    category: "Home",
+    price: "50 EG",
+  },
+  {
+    id: 8,
+    name: "Product 8",
+    category: "Clothing",
+    price: "50 EG",
+  },
+];
+
+export { ServiceData, productsData };
