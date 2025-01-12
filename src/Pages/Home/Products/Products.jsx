@@ -26,26 +26,30 @@ const Products = () => {
   };
 
   const AllProducts = currentItems.map((product) => (
-    <div className="product-card bg-white text-black">
+    <div className="product-card p-2 bg-white text-black rounded-md">
       <div key={product.id}>
+        <img src={product.img} alt="" className="max-w-[300px] max-h-[240px]" />
         <h5> {product.name}</h5>
-        <p> {product.category}</p>
-        <p> {product.price}</p>
+        <div className="flex justify-between">
+          <p> {product.category}</p>
+          <p> {product.price}</p>
+        </div>
       </div>
     </div>
   ));
 
   return (
-    <div>
-      <h1>Products</h1>
+    <div className="flex flex-col items-center">
+      <h1 className="text-4xl p-5">Products</h1>
 
       {/* الفلتر */}
       <input
         type="text"
+        className="rounded-xl text-black"
         placeholder="Filter by category"
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
-        style={{ marginBottom: "20px", padding: "10px", width: "200px" }}
+        style={{ marginBottom: "20px", padding: "15px", width: "50%" }}
       />
 
       {/* عرض المنتجات */}

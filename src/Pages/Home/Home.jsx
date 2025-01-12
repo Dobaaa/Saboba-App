@@ -8,6 +8,7 @@ import Paginationn from "./pagination/pagination ";
 import MobileImg from "../../Assets/mobile.png";
 import Reviews from "./Reviews/Reviews";
 import Products from "./Products/Products";
+import FooterLogoo from "../../Assets/logo.png";
 const Home = () => {
   // translate the content
   const { t, i18n } = useTranslation();
@@ -136,6 +137,36 @@ const Home = () => {
           <Products />
         </div>
       </div>
+
+      {/* footer area*/}
+      <footer className=" p-5">
+        <div className="container flex justify-evenly items-center">
+          <div className="brand-links text-center">
+            <img src={FooterLogoo} alt="" className="max-w-[130px] pb-2" />
+            <p>adsdSFsafffffffff</p>
+            <div className="social pt-2 flex gap-4 justify-center">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+          </div>
+          <ul>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+          </ul>
+          <ul className="">
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 };
