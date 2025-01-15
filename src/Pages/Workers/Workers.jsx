@@ -45,7 +45,7 @@ const Workers = () => {
       <div className="flex justify-center items-center">
         <div className="grid grid-cols-4 gap-10  ">
           {filteredCards.map((i) => (
-            <div className=" w-[300px] h-[250px] mb-20 ">
+            <div className=" w-[300px] h-[250px] mb-20  cursor-pointer">
               <Card
                 key={i.id}
                 img={i.img}
