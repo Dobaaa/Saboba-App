@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../Assets/logo.png";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -132,7 +133,9 @@ const Nav = () => {
             )}
           </div>
         </li>
-        <li>{t("Login")}</li>
+        <li>
+          <Link to="/login">{t("Login")}</Link>{" "}
+        </li>
       </ul>
     </div>
   );

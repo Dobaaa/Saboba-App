@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { productsData } from "../../../Data";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const Products = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(4); // عدد العناصر في الصفحة الواحدة
@@ -28,7 +30,11 @@ const Products = () => {
   const AllProducts = currentItems.map((product) => (
     <div className="product-card p-2 bg-white text-black rounded-md">
       <div key={product.id}>
-        <img src={product.img} alt="" className="max-w-[300px] max-h-[240px]" />
+        <LazyLoadImage
+          src={product.img}
+          alt=""
+          className="max-w-[300px] max-h-[240px]"
+        />
         <h5> {product.name}</h5>
         <div className="flex justify-between">
           <p> {product.category}</p>

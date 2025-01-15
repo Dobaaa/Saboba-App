@@ -10,12 +10,15 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { ServiceData } from "../../../Data";
 import Card from "../../../Components/Cards/Card";
+import { Link } from "react-router-dom";
 
 const Paginationn = () => {
   const Services = ServiceData.map((i) => {
     return (
       <SwiperSlide>
-        <Card key={i.id} img={i.img} category={i.category} desc={i.desc} />
+        <Link to="workers">
+          <Card key={i.id} img={i.img} category={i.category} desc={i.desc} />
+        </Link>
       </SwiperSlide>
     );
   });

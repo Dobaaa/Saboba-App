@@ -9,6 +9,9 @@ import MobileImg from "../../Assets/mobile.png";
 import Reviews from "./Reviews/Reviews";
 import Products from "./Products/Products";
 import FooterLogoo from "../../Assets/logo.png";
+import TopRated from "./TopRated/topRated";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const Home = () => {
   // translate the content
   const { t, i18n } = useTranslation();
@@ -59,7 +62,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="basis-1/2">
-                <img src={LandImg} alt="" className="Land-img" />
+                <LazyLoadImage src={LandImg} alt="" className="Land-img" />
               </div>
             </div>
           </div>
@@ -120,7 +123,7 @@ const Home = () => {
             </div>
           </div>
           <div className="why-saboba-img basis-1/2 flex ">
-            <img src={MobileImg} alt="" className="w-[500px]" />
+            <LazyLoadImage src={MobileImg} alt="" className="w-[500px]" />
           </div>
         </div>
       </div>
@@ -137,7 +140,8 @@ const Home = () => {
           <Products />
         </div>
       </div>
-
+      {/* Top reated */}
+      <TopRated />
       {/* footer area*/}
       <footer className=" p-5">
         <div className="container flex justify-evenly items-center">
