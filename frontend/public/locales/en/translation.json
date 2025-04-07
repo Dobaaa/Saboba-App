@@ -1,0 +1,67 @@
+{
+  "navbar": {
+    "home": "HOME",
+    "workers": "ALL WORKERS",
+    "about": "ABOUT",
+    "contact": "CONTACT",
+    "createAccount": "Create account",
+    "myProfile": "My Profile",
+    "myAppointments": "My Appointments",
+    "logOut": "Log Out"
+  },
+  "header": {
+    "title": "Book Appointments With Trusted Workers",
+    "description": "Simply browse through our extensive list of trusted workers, schedule your appointment hassle-free.",
+    "bookButton": "Book appointment"
+  },
+  "speciality": {
+    "title": "Find by Speciality",
+    "description": "Simply browse through our extensive list of trusted workers, schedule your appointment hassle-free."
+  },
+  "topWorkers": {
+    "title": "Top Workers to Book",
+    "description": "Simply browse through our extensive list of trusted workers.",
+    "available": "Available",
+    "notAvailable": "Not Available",
+    "more": "More"
+  },
+  "banner": {
+    "title1": "Book Appointment",
+    "title2": "With 100+ Trusted Workers",
+    "createAccount": "Create account"
+  },
+  "about": {
+    "title": "ABOUT US",
+    "welcome": "Welcome to Prescripto, your trusted partner in managing your healthcare needs conveniently and efficiently. At Prescripto, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records.",
+    "commitment": "Prescripto is committed to excellence in healthcare technology. We continuously strive to enhance our platform, integrating the latest advancements to improve user experience and deliver superior service. Whether you're booking your first appointment or managing ongoing care, Prescripto is here to support you every step of the way.",
+    "visionTitle": "Our Vision",
+    "vision": "Our vision at Prescripto is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.",
+    "whyChooseUs": "WHY Choose Us",
+    "efficiency": {
+      "title": "Efficiency",
+      "description": "Streamlined appointment scheduling that fits into your busy lifestyle."
+    },
+    "convenience": {
+      "title": "Convenience",
+      "description": "Access to a network of trusted healthcare professionals in your area."
+    },
+    "personalization": {
+      "title": "Personalization",
+      "description": "Tailored recommendations and reminders to help you stay on top of your health."
+    }
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "office": "Our OFFICE",
+    "address": "54709 Willms Station\nSuite 350, Washington, USA",
+    "contactInfo": "Tel: (415) 555‑0132\nEmail: greatstackdev@gmail.com",
+    "careers": "Careers at Saboba",
+    "careersDescription": "Learn more about our teams and job openings.",
+    "exploreJobs": "Explore Jobs"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Operation successful"
+  }
+}
