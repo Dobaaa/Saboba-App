@@ -1,20 +1,33 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
+import { useTranslation } from "react-i18next";
 
 const Workers = () => {
   const { speciality } = useParams();
   const { workers } = useContext(AppContext);
   const [filterWorker, SetFilterWorker] = useState([]);
   const [showFilter, SetShowFilter] = useState(false);
-  //navigate
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  // Original speciality values
+  const specialityTypes = {
+    painter: "Painter",
+    plumber: "Plumber",
+    electrician: "Electrician",
+    carpenter: "Carpenter",
+    airTechnician: "Air Technician",
+    tvTechnician: "TV Technician",
+  };
 
   //filter function
   const ApplyFilter = () => {
     if (speciality) {
       SetFilterWorker(
-        workers.filter((worker) => worker.speciality === speciality)
+        workers.filter(
+          (worker) => worker.speciality === specialityTypes[speciality]
+        )
       );
     } else {
       SetFilterWorker(workers);
@@ -27,9 +40,10 @@ const Workers = () => {
   }, [workers, speciality]);
 
   return (
-    <div>
-      <p className="text-gray-600 ">Browse through the workers specialist.</p>
-      <div className=" flex flex-col sm:flex-row items-start gap-5 mt-5">
+    <div className="px-5 sm:px-10 py-10">
+      <h1 className="text-2xl font-medium">{t("workers.title")}</h1>
+      <p className="text-gray-600">{t("workers.title")}</p>
+      <div className="flex flex-col sm:flex-row items-start gap-5 mt-5">
         <button
           onClick={() => {
             SetShowFilter((prev) => !prev);
@@ -38,85 +52,28 @@ const Workers = () => {
             showFilter ? "bg-primary text-white " : ""
           }`}
         >
-          Filters
+          {t("workers.filters")}
         </button>
         <div
           className={`speciality-button flex flex-col gap-4 text-sm text-gray-600 ${
             showFilter ? "flex " : "hidden sm:flex"
           }`}
         >
-          <p
-            onClick={() =>
-              speciality === "Painter"
-                ? navigate("/workers")
-                : navigate("/workers/Painter")
-            }
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${
-              speciality === "Painter" ? "bg-indigo-100 text-black" : ""
-            }`}
-          >
-            Painter
-          </p>
-          <p
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${
-              speciality === "Plumber" ? "bg-indigo-100 text-black" : ""
-            }`}
-            onClick={() =>
-              speciality === "Plumber"
-                ? navigate("/workers")
-                : navigate("/workers/Plumber")
-            }
-          >
-            Plumber
-          </p>
-          <p
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${
-              speciality === "Electrician" ? "bg-indigo-100 text-black" : ""
-            }`}
-            onClick={() =>
-              speciality === "Electrician"
-                ? navigate("/workers")
-                : navigate("/workers/Electrician")
-            }
-          >
-            Electrician
-          </p>
-          <p
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${
-              speciality === "Carpenter" ? "bg-indigo-100 text-black" : ""
-            }`}
-            onClick={() =>
-              speciality === "Carpenter"
-                ? navigate("/workers")
-                : navigate("/workers/Carpenter")
-            }
-          >
-            Carpenter
-          </p>
-          <p
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer whitespace-nowrap ${
-              speciality === "Air Technician" ? "bg-indigo-100 text-black" : ""
-            }`}
-            onClick={() =>
-              speciality === "Air Technician"
-                ? navigate("/workers")
-                : navigate("/workers/Air Technician")
-            }
-          >
-            Air Technician
-          </p>
-          <p
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer whitespace-nowrap ${
-              speciality === "TV Technician" ? "bg-indigo-100 text-black" : ""
-            }`}
-            onClick={() =>
-              speciality === "TV Technician"
-                ? navigate("/workers")
-                : navigate("/workers/TV Technician")
-            }
-          >
-            TV Technician
-          </p>
+          {Object.entries(specialityTypes).map(([key, value]) => (
+            <p
+              key={key}
+              onClick={() =>
+                speciality === key
+                  ? navigate("/workers")
+                  : navigate(`/workers/${key}`)
+              }
+              className={`w-[94vw] whitespace-nowrap  sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${
+                speciality === key ? "bg-indigo-100 text-black" : ""
+              }`}
+            >
+              {t(`workers.types.${key}`)}
+            </p>
+          ))}
         </div>
         <div className="w-full grid grid-cols-auto gap-4 gap-y-6">
           {filterWorker.map((item, index) => (
@@ -137,10 +94,20 @@ const Workers = () => {
                       item.available ? "bg-green-500" : "bg-gray-500"
                     }  rounded-full`}
                   ></p>
-                  <p>{item.available ? "Available" : "Not Available"}</p>
+                  <p>
+                    {item.available
+                      ? t("workers.status.available")
+                      : t("workers.status.notAvailable")}
+                  </p>
                 </div>
                 <p className="text-gray-900 text-lg font-medium">{item.name}</p>
-                <p className="text-gray-600 text-sm">{item.speciality}</p>
+                <p className="text-gray-600 text-sm">
+                  {t(
+                    `workers.types.${Object.keys(specialityTypes).find(
+                      (key) => specialityTypes[key] === item.speciality
+                    )}`
+                  )}
+                </p>
               </div>
             </div>
           ))}

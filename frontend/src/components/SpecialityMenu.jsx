@@ -24,7 +24,7 @@ const SpecialityMenu = () => {
             className="flex flex-col items-center text-xs flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500"
           >
             <img className="w-16 sm:w-24 mb-2" src={item.image} alt="" />
-            <p>{item.speciality}</p>
+            <p>{t(`speciality.types.${item.speciality}`)}</p>
           </Link>
         ))}
       </div>

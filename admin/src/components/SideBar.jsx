@@ -42,7 +42,7 @@ const SideBar = () => {
             to={"/add-worker"}
           >
             <img src={assets.add_icon} alt="" />
-            <p className="hidden md:block">Add Doctor</p>
+            <p className="hidden md:block">Add Worker</p>
           </NavLink>
           <NavLink
             className={({ isActive }) =>

@@ -102,7 +102,7 @@ const NavBar = () => {
                   {t("navbar.myAppointments")}
                 </p>
                 <p
-                  onClick={() => logOut}
+                  onClick={() => logOut()}
                   className="hover:text-black cursor-pointer"
                 >
                   {t("navbar.logOut")}

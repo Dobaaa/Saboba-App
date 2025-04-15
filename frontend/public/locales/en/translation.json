@@ -16,7 +16,15 @@
   },
   "speciality": {
     "title": "Find by Speciality",
-    "description": "Simply browse through our extensive list of trusted workers, schedule your appointment hassle-free."
+    "description": "Simply browse through our extensive list of trusted workers, schedule your appointment hassle-free.",
+    "types": {
+      "painter": "Painter",
+      "plumber": "Plumber",
+      "electrician": "Electrician",
+      "carpenter": "Carpenter",
+      "airTechnician": "Air Technician",
+      "tvTechnician": "TV Technician"
+    }
   },
   "topWorkers": {
     "title": "Top Workers to Book",
@@ -63,5 +71,58 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "success": "Operation successful"
+  },
+  "workers": {
+    "title": "Browse through the workers specialist",
+    "filters": "Filters",
+    "types": {
+      "painter": "Painter",
+      "plumber": "Plumber",
+      "electrician": "Electrician",
+      "carpenter": "Carpenter",
+      "airTechnician": "Air Technician",
+      "tvTechnician": "TV Technician"
+    },
+    "status": {
+      "available": "Available",
+      "notAvailable": "Not Available"
+    },
+    "reset": "Reset",
+    "apply": "Apply",
+    "noWorkers": "No workers available",
+    "search": "Search",
+    "searchPlaceholder": "Search for a worker..."
+  },
+  "footer": {
+    "title": "Saboba",
+    "description": "Your trusted partner for home services",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact Us",
+    "address": "123 Main Street, City, Country",
+    "phone": "Phone",
+    "email": "Email",
+    "rights": "All rights reserved"
+  },
+  "ai": {
+    "title": "Smart Assistant",
+    "you": "You",
+    "bot": "Assistant",
+    "thinking": "Thinking",
+    "send": "Send",
+    "placeholder": "Type your message here...",
+    "greeting": "Hello! How can I help you today?",
+    "workers": "We offer a variety of skilled workers in different specialties including electricians, plumbers, carpenters, and painters.",
+    "electrician": "We have professional electricians for all residential and commercial electrical work.",
+    "plumber": "Professional plumbers available for all plumbing and repair work.",
+    "carpenter": "Skilled carpenters for all woodwork and decoration.",
+    "painter": "Professional painters for all painting and decoration work.",
+    "services": "We offer a wide range of residential and commercial services. You can browse our services list on our website.",
+    "contact": "You can contact us by phone: 123456789 or email: info@example.com",
+    "help": "How can I help you? I can answer your questions about services, workers, and how to contact us.",
+    "default": "Sorry, I didn't understand your question. Could you please rephrase it?",
+    "error": "An error occurred, please try again!",
+    "noResponse": "No response from server, please try again",
+    "language": "en"
   }
 }
